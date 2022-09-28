@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import {faChevronRight, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 
 @Component({
@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
 
   faCoffee = faCoffee;
   faGithub = faGithub;
+  faEnvelope = faEnvelope;
+  faLinkedin = faLinkedin;
   faChevronRight = faChevronRight;
   constructor() { }
 
