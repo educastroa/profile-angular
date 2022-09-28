@@ -1,49 +1,43 @@
-<nav id="navbar" class="py-8 w-full z-50 top-0 py-3 sm:py-5 absolute">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <button
-          class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-        >
-          <span class="sr-only"></span>
-          <i class="block h-6 w-6" aria-hidden="true"></i>
-          <i class="block h-6 w-6" aria-hidden="true"></i>
-        </button>
-      </div>
-      <div
-        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-      >
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <a
-              href="/"
-              class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-            >
-              Home
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-      >
-        <div as="div" class="relative ml-3"></div>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="bg-primary bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to sm:hidden"
-  >
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <button
-        href="/"
-        class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        aria-current="page"
-      >
-        Home
+<nav class="py-8 w-full z-50 top-0 py-3 sm:py-5 absolute">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block">
+      <button class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" (click)="toggleNavbar()">
+        <fa-icon class="text-2xl text-white hover:text-yellow" [icon]="faBars"></fa-icon>
       </button>
     </div>
+    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow lg:items-center">
+      <ul class="flex flex-col lg:flex-row list-none ml-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+            Technologies
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+            Experience
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-
 </nav>
